@@ -11,18 +11,12 @@ git clone https://github.com/DhruvSinha2003/emoticon-maker.git
 2. Install dependencies:
 
 ```bash
-cd emoticon-generator
+cd emoticon-maker
 npm install
 ```
 
-3. Install required package:
+3. Start the development server:
 
 ```bash
-npm install lucide-react
-```
-
-4. Start the development server:
-
-```bash
-npm start
+npm run dev
 ```
