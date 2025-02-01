@@ -1,4 +1,4 @@
-import { Copy } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 import React, { useState } from "react";
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
     mouth: "ω",
     arms: "づ",
   });
+  const [showToast, setShowToast] = useState(false);
 
   const options = {
     base: [
@@ -29,12 +30,29 @@ function App() {
     return `${baseOption.open}${selectedParts.arms}${selectedParts.eyes}${selectedParts.mouth}${selectedParts.eyes}${baseOption.close}${selectedParts.arms}`;
   };
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(generateEmoticon());
+  const copyToClipboard = async () => {
+    await navigator.clipboard.writeText(generateEmoticon());
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 2000);
   };
 
   return (
-    <div className="min-h-screen bg-[#1D2B53] flex items-center justify-center p-4">
+    <div className="min-h-screen bg-[#1D2B53] flex items-center justify-center p-4 relative">
+      <div
+        className={`
+        fixed top-4 right-4 bg-[#7DCCFF] text-[#1D2B53] px-4 py-2 rounded-lg
+        shadow-lg flex items-center gap-2 transition-all duration-300
+        ${
+          showToast
+            ? "opacity-100 transform translate-y-0"
+            : "opacity-0 transform -translate-y-4 pointer-events-none"
+        }
+      `}
+      >
+        <Check className="w-4 h-4" />
+        <span className="font-medium">Copied to clipboard!</span>
+      </div>
+
       <div className="w-full max-w-md bg-[#29366F] rounded-xl shadow-lg p-6 space-y-6">
         <div className="space-y-4">
           <h1 className="text-2xl font-bold text-center text-[#7DCCFF]">
@@ -94,5 +112,3 @@ function App() {
 }
 
 export default App;
-
-//(つ⚆_⚆)つ
