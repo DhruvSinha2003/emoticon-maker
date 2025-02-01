@@ -41,10 +41,6 @@ function App() {
       <div className="w-full max-w-md">
         <div className="bg-[#29366F] rounded-xl shadow-lg p-6 space-y-6">
           <div className="space-y-4">
-            <h1 className="text-2xl font-bold text-center text-[#7DCCFF]">
-              Emoticon Generator
-            </h1>
-
             <div className="bg-[#1D2B53] p-4 rounded-lg text-center">
               <span className="text-2xl font-mono text-[#7DCCFF]">
                 {generateEmoticon()}

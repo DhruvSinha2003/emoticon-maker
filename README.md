@@ -1,8 +1,28 @@
-# React + Vite
+# Emoticon Maker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation
 
-Currently, two official plugins are available:
+1. Clone the repository:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+git clone https://github.com/DhruvSinha2003/emoticon-maker.git
+```
+
+2. Install dependencies:
+
+```bash
+cd emoticon-generator
+npm install
+```
+
+3. Install required package:
+
+```bash
+npm install lucide-react
+```
+
+4. Start the development server:
+
+```bash
+npm start
+```
