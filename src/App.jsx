@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function App() {
   const [selectedParts, setSelectedParts] = useState({
-    base: "(",
+    body: "(",
     eyes: "•",
     mouth: "ω",
     arms: "づ",
@@ -25,10 +25,10 @@ function App() {
     arms: ["づ", "ノ", "つ", "⊂", "ʕ", "ᕙ", "╯", "¯\\"],
   };
   const generateEmoticon = () => {
-    const baseOption =
-      options.base.find((b) => b.open === selectedParts.base) ||
-      options.base[0];
-    return `${baseOption.open}${selectedParts.arms}${selectedParts.eyes}${selectedParts.mouth}${selectedParts.eyes}${baseOption.close}${selectedParts.arms}`;
+    const bodyOption =
+      options.body.find((b) => b.open === selectedParts.body) ||
+      options.body[0];
+    return `${bodyOption.open}${selectedParts.arms}${selectedParts.eyes}${selectedParts.mouth}${selectedParts.eyes}${bodyOption.close}${selectedParts.arms}`;
   };
 
   const copyToClipboard = async () => {
