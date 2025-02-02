@@ -44,13 +44,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#1D2B53] flex items-center justify-center p-4">
-      <div className="w-full max-w-4xl bg-[#29366F] rounded-xl ring-1 ring-blue-500 shadow-lg shadow-blue-400 flex overflow-hidden">
-        <div className="w-1/2 bg-[#1D2B53] flex items-center justify-center p-8 ring-1 ring-blue-500">
-          <span className="text-4xl font-mono text-[#7DCCFF] break-all text-center ">
+      <div className="w-full max-w-4xl bg-[#29366F] rounded-xl ring-1 ring-blue-500 shadow-lg shadow-blue-400 flex flex-col md:flex-row overflow-hidden">
+        <div className="w-full md:w-1/2 bg-[#1D2B53] flex items-center justify-center p-8 ring-1 ring-blue-500">
+          <span className="text-4xl font-mono text-[#7DCCFF] break-all text-center">
             {generateEmoticon()}
           </span>
         </div>
-        <div className="w-1/2 p-6 space-y-6">
+        <div className="w-full md:w-1/2 p-6 space-y-6">
           <div className="space-y-4">
             {Object.entries(options).map(([key, values]) => (
               <div key={key} className="space-y-1">
