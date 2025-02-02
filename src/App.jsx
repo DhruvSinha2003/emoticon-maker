@@ -1,5 +1,5 @@
 import { Check, Copy } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [selectedParts, setSelectedParts] = useState({
@@ -36,6 +36,10 @@ function App() {
     setShowToast(true);
     setTimeout(() => setShowToast(false), 2000);
   };
+
+  useEffect(() => {
+    document.title = generateEmoticon();
+  }, [selectedParts]);
 
   return (
     <div className="min-h-screen bg-[#1D2B53] flex flex-col items-center justify-center p-4">
