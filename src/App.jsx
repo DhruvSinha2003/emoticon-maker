@@ -1,5 +1,5 @@
 import { Check, Copy } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [selectedParts, setSelectedParts] = useState({
@@ -17,12 +17,13 @@ function App() {
       { open: "{", close: "}" },
       { open: "<", close: ">" },
       { open: "⸂", close: "⸃" },
+      { open: "ʕ", close: "ʔ" },
+      { open: "≧", close: "≦" },
     ],
     eyes: ["•", "◕", "ᵔ", "˘", "⚆", "ㆆ", "◠", "ಠ"],
-    mouth: ["ω", "◡", "▽", "ᴥ", "౪", "ロ", "⌂", "_", "‿"],
+    mouth: ["ω", "◡", "▽", "ᴥ", "౪", "ロ", "⌂", "_", "‿", "︹"],
     arms: ["づ", "ノ", "つ", "⊂", "ʕ", "ᕙ", "╯", "¯\\"],
   };
-
   const generateEmoticon = () => {
     const baseOption =
       options.base.find((b) => b.open === selectedParts.base) ||
