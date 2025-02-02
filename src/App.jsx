@@ -11,7 +11,7 @@ function App() {
   const [showToast, setShowToast] = useState(false);
 
   const options = {
-    base: [
+    body: [
       { open: "(", close: ")" },
       { open: "[", close: "]" },
       { open: "{", close: "}" },
