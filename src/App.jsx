@@ -3,7 +3,7 @@ import Emoticon from "./Emoticon";
 import TextStyler from "./TextStyler";
 
 function App() {
-  const [toggle, setToggle] = useState(0);
+  const [toggle, setToggle] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleToggle = () => {
