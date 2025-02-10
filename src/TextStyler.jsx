@@ -1,5 +1,5 @@
 import { Check, Copy } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const TextStyler = () => {
   const [inputText, setInputText] = useState("");
@@ -235,6 +235,10 @@ const TextStyler = () => {
 
     return lines.join("\n");
   };
+
+  useEffect(() => {
+    document.title = inputText || "Text Styler";
+  }, [inputText]);
 
   const copyToClipboard = async () => {
     await navigator.clipboard.writeText(generateBlockText(inputText));
