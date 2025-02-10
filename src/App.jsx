@@ -32,7 +32,7 @@ function App() {
       <div className="relative">
         <div
           className={`transition-all duration-300 ease-in-out ${
-            isAnimating ? "opacity-80 scale-98" : "opacity-100 scale-100"
+            isAnimating ? "opacity-90 scale-99" : "opacity-100 scale-100"
           }`}
         >
           {toggle === 0 ? <TextStyler /> : <Emoticon />}
